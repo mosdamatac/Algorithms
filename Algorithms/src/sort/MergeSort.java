@@ -4,14 +4,6 @@ import java.util.Arrays;
 
 public class MergeSort {
 
-	public static void main(String[] args) {
-		int[] array = {54, 1001, 19, 4, 28, 8, 6, 999, 500, 345};
-		int[] sortedArray = new int[array.length];
-		sortedArray = mergeSort(array);
-		System.out.println(Arrays.toString(sortedArray));
-
-	}
-	
 	public static int[] mergeSort(int[] array) {
 		if (array.length <= 1) { return array; }
 		
@@ -25,7 +17,7 @@ public class MergeSort {
 		return merge(arrayOne, arrayTwo);
 	}
 	
-	public static int[] merge(int[] arrayOne, int[] arrayTwo) {
+	private static int[] merge(int[] arrayOne, int[] arrayTwo) {
 		int[] mergedArray = new int[arrayOne.length + arrayTwo.length];
 		
 		int indexOne = 0;
